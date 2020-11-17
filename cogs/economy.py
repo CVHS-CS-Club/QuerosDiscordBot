@@ -49,7 +49,7 @@ class Economy(commands.Cog):
 
 	@commands.command(aliases=['bal'])
 	@commands.cooldown(rate=1, per=3.0, type=commands.BucketType.user)
-	async def balance(self, ctx, user: discord.Member):
+	async def balance(self, ctx, user=None):
 		"""Gets balance"""
 		cmds = configcol.find({"$and": [{"guild": ctx.guild.id}, {"cfg_type": 'cmdsoff'}]})
 		cmdsList = ['0']
@@ -68,6 +68,8 @@ class Economy(commands.Cog):
 
 		if ctx.message.channel.id in channelList:
 			return
+		if user == None: 
+			user = ctx.message.author
 		balance = balcol.find({'user':user.id})
 		userStr = user.name
 
