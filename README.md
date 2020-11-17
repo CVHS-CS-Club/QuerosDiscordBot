@@ -1,7 +1,7 @@
 # QuerosDiscordBot
 
 ## What is Queros?
-Queros (pronounced like kew-eros) is a Discord bot designed with moderation features, utillity, music, and other fun commands! 
+Queros (pronounced like kew-eros) is a Discord bot written in Python designed with moderation features, utillity, music, and other fun commands! 
 
 ##Moderation:
 
