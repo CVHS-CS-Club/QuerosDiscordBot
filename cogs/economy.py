@@ -323,7 +323,7 @@ class Economy(commands.Cog):
 			return
 
 	@commands.command()
-	@commands.cooldown(rate=1, per=31536000, type=commands.BucketType.user)
+	@commands.cooldown(rate=1, per=31449600, type=commands.BucketType.user)
 	async def yearly(self, ctx):
 		"""Yearly payout. BIG amount of cash ;)"""
 		cmds = configcol.find({"$and": [{"guild": ctx.guild.id}, {"cfg_type": 'cmdsoff'}]})
