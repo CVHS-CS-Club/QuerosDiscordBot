@@ -3,7 +3,7 @@
 ## What is Queros?
 Queros (pronounced like kew-eros) is a Discord bot designed with moderation features, utillity, music, and other fun commands! 
 
-###Moderation:
+##Moderation:
 
 Queros comes equipped with basic commands for moderation. It has temp banning, text mute, vc mute, kick, warn, and logging for that. Currently, only banning supports temporary infraction, but vc mute and text mute will come soon.
 
@@ -32,6 +32,6 @@ This bot has a lot of fun commands. You can manipulate images and run funny comm
 Note: For loop, shuffle, and the override commands, you need Manage Server perms. 
 
 
-####Have any questions?
+**Have any questions?**
 
 Dm me on Discord (Trooper Z#7824) or join the support server [here](https://discord.gg/7qvsUCBZ8W).
