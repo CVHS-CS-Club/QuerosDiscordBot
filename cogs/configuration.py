@@ -67,7 +67,7 @@ class Configuration(commands.Cog):
 				listcmd = []
 				listcmd.extend(i['commands'])
 			listcmd.remove(cmd)
-			configcol.update_one({"$and": [{"guild": ctx.guild.id}, {"cfg_type": 'cmdsoff'}]}, {"$set":{'cfg_type':'cmdsoff', 'guild':ctx.guild.id, 'commands':channels}}, upsert=True)
+			configcol.update_one({"$and": [{"guild": ctx.guild.id}, {"cfg_type": 'cmdsoff'}]}, {"$set":{'cfg_type':'cmdsoff', 'guild':ctx.guild.id, 'commands':listcmd}}, upsert=True)
 			await ctx.send(f"Removed **{cmd}** from off list.")
 
 	@commands.command()
