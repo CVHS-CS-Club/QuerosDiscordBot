@@ -126,8 +126,8 @@ class Fun(commands.Cog):
 		for attachment in ctx.message.attachments:
 			await attachment.save("wavetargetimg.png")
 			with Image(filename ="wavetargetimg.png") as img:
-    				img.wave(amplitude = img.height / height, wave_length = img.width / width) 
-				providedimage.save(filename ="wavedimg.png") 
+						img.wave(amplitude = img.height / height, wave_length = img.width / width) 
+						providedimage.save(filename ="wavedimg.png") 
 			pic = discord.File('wavedimg.png')
 			await ctx.send(file=pic)
 		
