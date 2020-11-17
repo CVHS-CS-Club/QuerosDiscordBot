@@ -13,7 +13,7 @@ import urllib.request
 import discord
 from discord.ext import commands
 import pymongo
-from PIL import Image
+import PIL.Image
 import deeppyer
 from wand.image import Image 
 
@@ -96,7 +96,7 @@ class Fun(commands.Cog):
 			return
 		for attachment in ctx.message.attachments:
 			await attachment.save("targetImgdp.png")
-			providedimage = Image.open("targetImgdp.png")
+			providedimage = PIL.Image.open("targetImgdp.png")
 			image = await deeppyer.deepfry(providedimage, flares=False)
 			image.save("fryer.png")
 			pic = discord.File('fryer.png')
@@ -125,7 +125,7 @@ class Fun(commands.Cog):
 			return
 		for attachment in ctx.message.attachments:
 			await attachment.save("wavetargetimg.png")
-			providedimage = Image.open("wavetargetimg.png")
+			providedimage = PIL.Image.open("wavetargetimg.png")
 			providedimage.wave(amplitude = img.height / height, 
              wave_length = img.width / width) 
 			providedimage.save(filename ="wavedimg.png") 
@@ -157,7 +157,7 @@ class Fun(commands.Cog):
 
 		img = user.avatar_url_as()
 		await img.save("targetuserImgdp.png")
-		providedimage = Image.open("targetuserImgdp.png")
+		providedimage = PIL.Image.open("targetuserImgdp.png")
 		image = await deeppyer.deepfry(providedimage, flares=False)
 		image.save("fryer.png")
 		pic = discord.File('fryer.png')
