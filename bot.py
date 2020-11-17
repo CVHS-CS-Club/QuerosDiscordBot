@@ -34,8 +34,7 @@ modcol = mydb["moderation"]
 
 initial_extensions = ['cogs.utillity', 'cogs.fun', 'cogs.music', 'cogs.configuration', 'cogs.moderation', 'cogs.economy']
 
-intervals = (('years', 31536000),
-    ('months', 2592000),
+intervals = (
     ('weeks', 604800),  # 60 * 60 * 24 * 7
     ('days', 86400),    # 60 * 60 * 24
     ('hours', 3600),    # 60 * 60
