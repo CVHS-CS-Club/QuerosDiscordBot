@@ -76,7 +76,7 @@ class Fun(commands.Cog):
 	@commands.command()
 	@commands.cooldown(rate=1, per=10.0, type=commands.BucketType.user)
 	async def deepfry(self, ctx): 
-		"""Deepfries an image"""
+		"""Deepfries an image, must put command with uploaded image"""
 		cmds = configcol.find({"$and": [{"guild": ctx.guild.id}, {"cfg_type": 'cmdsoff'}]})
 		cmdsList = ['0']
 		for i in cmds:
@@ -105,7 +105,7 @@ class Fun(commands.Cog):
 	@commands.command()
 	@commands.cooldown(rate=1, per=10.0, type=commands.BucketType.user)
 	async def waveify(self, ctx, height = 32, width = 4): 
-		"""Adds wave effect to an image"""
+		"""Adds wave effect to an image, must put command with uploaded image"""
 		cmds = configcol.find({"$and": [{"guild": ctx.guild.id}, {"cfg_type": 'cmdsoff'}]})
 		cmdsList = ['0']
 		for i in cmds:
@@ -127,7 +127,7 @@ class Fun(commands.Cog):
 			await attachment.save("wavetargetimg.png")
 			with Image(filename ="wavetargetimg.png") as img:
 						img.wave(amplitude = img.height / height, wave_length = img.width / width) 
-						providedimage.save(filename ="wavedimg.png") 
+						img.save(filename ="wavedimg.png") 
 			pic = discord.File('wavedimg.png')
 			await ctx.send(file=pic)
 		
